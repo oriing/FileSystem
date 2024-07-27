@@ -19,9 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="parser_head.c" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="parser_head.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
