@@ -30,6 +30,17 @@ void checkMover(char* arr, int count) {
 	}
 }
 
+bool getFileToInt_16(FILE* fp, lint spoint, int16_t* a) {
+	fseek(fp, spoint, 0);
+	*a = 0;
+
+	for (int i = 0; i < 2; i++) {
+		if (feof(fp)) return false;
+		*a = *a >> 8;
+		fread((char*)a + 1, sizeof(char), 1, fp);
+	}
+	return true;
+}
 bool getFileToInt_32(FILE* fp, lint spoint, int32_t* a) {
 	fseek(fp, spoint, 0);
 	*a = 0;
