@@ -185,7 +185,7 @@ bool readMft(FILE* fp, lint startPoint) {
 }
 
 int main(int argc, char** argv) {
-	if (argc < 1) {
+	if (argc < 2) {
 		printf("[error] Use ./ntfs_parser [FileName]\n");
 		exit(0);
 	}
