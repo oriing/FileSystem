@@ -29,7 +29,13 @@ void checkMover(char* arr, int count) {
 		arr[i] = 0;
 	}
 }
+bool getFileToInt_8(FILE* fp, lint spoint, int8_t* a) {
+	fseek(fp, spoint, 0);
+	*a = 0;
 
+	fread(a, sizeof(int8_t), 1, fp);
+	return true;
+}
 bool getFileToInt_16(FILE* fp, lint spoint, int16_t* a) {
 	fseek(fp, spoint, 0);
 	*a = 0;
